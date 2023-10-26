@@ -1,45 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <title>Home Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module" defer></script>
 </head>
 <body>
-<div id="app" class="app">
-    <header id="header" class="header">
-        <div id="header__left" class="header__left"></div>
+<div id="app" class="app container">
+    <header id="header container" class="header">
+        <div id="header__left" class="header__left">
+            <img src="img/Logo.svg" alt="Logo" class="header__logo__img"/>
+            <p class="header__Name">Interno</p>
+        </div>
         <div id="header__right" class="header__right">
             <nav id="nav" class="nav">
-                <a href="#" id="footer__link__pages1" class="header__link__pages link__pages" ></a>
-                <a href="#" id="footer__link__pages2" class="header__link__pages link__pages" ></a>
-                <a href="#" id="footer__link__pages3" class="header__link__pages link__pages" ></a>
+                <a href="#" id="footer__link__pages1" class="header__link__pages link__pages">Home</a>
+                <a href="#" id="footer__link__pages2" class="header__link__pages link__pages">Project</a>
+                <a href="#" id="footer__link__pages3" class="header__link__pages link__pages">Blog</a>
             </nav>
         </div>
     </header>
-    <main class="main" id="main">
+    <main class="main container" id="main">
         <div id="posters" class="posters">
-            <img id="posters__img" class="posters__img" src="" alt="">
+            <img id="posters__img" class="posters__img" src="img/Poster.png" alt="Poster__Background">
             <div id="posters__info" class="posters__info">
                 <div id="posters__title" class="posters__title">
-
+                    <p class="posters__title">Let Your Home
+                        Be Unique</p>
                 </div>
-                <div id="posters__description" class="posters__description">
 
+                <div id="posters__description" class="posters__description">
+                    <p class="posters__description">There are many variations of the passages of
+                        lorem Ipsum from available, majority.</p>
                 </div>
                 <button id="posters__button" class="posters__button">
-
+                    Get Started
+                    <img src="img/Vector.svg" alt="vector__svg">
                 </button>
             </div>
         </div>
         <div id="products" class="products">
             <div id="products__title" class="products__title">
-
+                <p class="products__title">Follow Our Projects</p>
+                <p class="products__description">It is a long-established fact that a reader will be distracted by the
+                    of readable content of page looking at its layouts points.</p>
             </div>
             <div id="products__box" class="products__box">
 
             </div>
             <div id="products_statistics" class="products__statistics">
-
+                <div id="products__statistics__box" class="products__statistics__box">
+                    <div id="products__statistic__item1" class="products__statistic__item"></div>
+                    <div id="products__statistic__item2" class="products__statistic__item"></div>
+                    <div id="products__statistic__item3" class="products__statistic__item"></div>
+                    <div id="products__statistic__item4" class="products__statistic__item"></div>
+                </div>
             </div>
             <div id="products__news" class="products__news">
                 <div id="products__news__title" class="products__news__title">
@@ -52,7 +71,6 @@
             </div>
         </div>
     </main>
-
     <footer id="footer" class="footer">
         <div id="footer__left" class="footer__left">
 
@@ -68,11 +86,17 @@
         </div>
         <nav id="footer__center" class="footer__center">
             <p id="footer__center__title" class="footer__center__title"></p>
-            <a id="footer__link__pages_1" class="footer__link__pages link__pages" href="#"></a>
-            <a id="footer__link__pages_2" class="footer__link__pages link__pages" href="#"></a>
-            <a id="footer__link__pages_3" class="footer__link__pages link__pages" href="#"></a>
+            <a id="footer__link__pages_1" class="footer__link__pages link__pages" href="#">Home</a>
+            <a id="footer__link__pages_2" class="footer__link__pages link__pages" href="#">Project</a>
+            <a id="footer__link__pages_3" class="footer__link__pages link__pages" href="#">Blog</a>
         </nav>
-
+        <div id="footer__right" class="footer__right">
+            <div id="footer__right__title" class="footer__right__title">
+                <p class="footer__right__address"></p>
+                <p class="footer__right__email"></p>
+                <p class="footer__right__phoneNumber"></p>
+            </div>
+        </div>
     </footer>
 </div>
 </body>

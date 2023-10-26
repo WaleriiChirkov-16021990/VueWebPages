@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 53px 0 134px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+
+        padding-left: calc(50% - 600px);
+        padding-right: calc(50% - 600px);
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 65px;
+    max-width: 1200px;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.header__Name {
+    color: #292F36;
+    font-family: DM Serif Display, sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 50px */
+}
+
+.header__right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16em;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 2.6em;
+}
+
+.link__pages {
+    color: #292F36;
+    text-align: center;
+    font-family: Jost, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 25px */
+}
+
+.posters {
+    display: inline-block;
+    justify-content: center;
+    position: relative;
+
+
+}
+
+.posters__img {
+    /*display: inline-block;*/
+    /*justify-content: center;*/
+}
+
+.posters__info {
+    display: block;
+    position: absolute;
+    top: 43.4%;
+    left: 22.5%;
+    transform: translate(-50%, -50%);
+}
+
+.posters__title {
+    color: #292F36;
+    font-family: DM Serif Display, sans-serif;
+    font-size: 65px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 81.25px */
+    width: 434px;
+    height: 162px;
+}
+
+.posters__description {
+    color: #4D5053;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+    max-width: 434px;
+    max-height: 62px;
+}
+
+.products__title {
+    color: #292F36;
+    text-align: center;
+    font-family: DM Serif Display, sans-serif;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%; /* 62.5px */
+    letter-spacing: 1px;
+}
+
+.products__description {
+    color: #4D5053;
+    text-align: center;
+    font-family: Jost, sans-serif;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 33px */
+    letter-spacing: 0.22px;
+}
