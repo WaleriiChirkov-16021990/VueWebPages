@@ -407,11 +407,10 @@ a {
     padding: 21px;
 }
 
-.products__news__box__item2{
+.products__news__box__item2 {
     background: #F4F0EC;
     box-shadow: 0px 10px 30px 0px rgba(255, 255, 255, 0.25);
 }
-
 
 
 .products__news__box__item__img {
@@ -444,7 +443,7 @@ a {
 }
 
 .products__news__box__link__arrow {
-    width:52px;
+    width: 52px;
     height: 52px;
 }
 
