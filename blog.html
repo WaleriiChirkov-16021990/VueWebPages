@@ -75,78 +75,18 @@
                     <p class="blog__products__news__info__title">Articles & News</p>
                 </div>
                 <div id="products__news__box" class="blog__products__news__box container">
-                    <div v-for="item in carts_design" :key="item.id" class="products__news__box__item" >
-                        <img :src="item.img.src" :alt="item.img.alt" class="products__news__box__item__img" src="img/productNews/Photo4.svg" alt="new photo">
-                        <div class="products__news__box__title">{{item.title}}</div>
+                    <div v-for="item in carts_design" :key="item.id" class="products__news__box__item">
+                        <img :src="item.img.src" :alt="item.img.alt" class="products__news__box__item__img">
+                        <p class="blog__info__design">{{item.blogInfoDesign}}</p>
+                        <div class="products__news__box__title" v-html="item.title"></div>
                         <div class="products__news__box__info">
                             <p class="products__news__box__date">{{item.productBoxDate}}</p>
-                            <a href="#" class="products__news__box__link"><img :src="item.imgArrow.src" :alt="item.imgArrow.alt" src="img/product/_.svg" alt="arrow"
+                            <a href="#" class="products__news__box__link"><img :src="item.imgArrow.src"
+                                                                               :alt="item.imgArrow.alt"
                                                                                class="products__news__box__link__arrow"></a>
                         </div>
                     </div>
                 </div>
-<!--                    <div class="products__news__box__item products__news__box__item2">-->
-<!--                        <img class="products__news__box__item__img" src="img/productNews/Photo5.svg" alt="new photo">-->
-<!--                        <p class="blog__info__design">Living Design</p>-->
-<!--                        <div class="products__news__box__title">Low Cost Latest Invented Interior Designing-->
-<!--                            <br/>Ideas.-->
-<!--                        </div>-->
-<!--                        <div class="products__news__box__info">-->
-<!--                            <p class="products__news__box__date">22 December,2022 </p>-->
-<!--                            <a href="#" class="products__news__box__link"><img src="img/productNews/_1.svg" alt="arrow"-->
-<!--                                                                               class="products__news__box__link__arrow products__news__box__link__arrow2"></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="products__news__box__item">-->
-<!--                        <img class="products__news__box__item__img" src="img/productNews/Photo6.svg" alt="new photo">-->
-<!--                        <p class="blog__info__design">Interior Design</p>-->
-<!--                        <div class="products__news__box__title">Best For Any Office & Business Interior-->
-<!--                            <br/>Solution-->
-<!--                        </div>-->
-<!--                        <div class="products__news__box__info">-->
-<!--                            <p class="products__news__box__date">25 December,2022 </p>-->
-<!--                            <a href="#" class="products__news__box__link"><img src="img/product/_.svg" alt="arrow"-->
-<!--                                                                               class="products__news__box__link__arrow"></a>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </div>-->
-                <!--                <div id="products__news__box2" class="blog__products__news__box">-->
-                <!--                    <div class="products__news__box__item">-->
-                <!--                        <img class="products__news__box__item__img" src="img/fromBlogHTML/Photo10.svg" alt="new photo">-->
-                <!--                        <p class="blog__info__design">Kitchan Design</p>-->
-                <!--                        <div class="products__news__box__title">Let’s Get Solution For Building Construction <br>Work-->
-                <!--                        </div>-->
-                <!--                        <div class="products__news__box__info">-->
-                <!--                            <p class="products__news__box__date">26 December,2022 </p>-->
-                <!--                            <a href="#" class="products__news__box__link"><img src="img/product/_.svg" alt="arrow"-->
-                <!--                                                                               class="products__news__box__link__arrow"></a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="products__news__box__item products__news__box__item">-->
-                <!--                        <img class="products__news__box__item__img" src="img/fromBlogHTML/Photo11.svg" alt="new photo">-->
-                <!--                        <p class="blog__info__design">Living Design</p>-->
-                <!--                        <div class="products__news__box__title">Low Cost Latest Invented Interior Designing-->
-                <!--                            <br/>Ideas.-->
-                <!--                        </div>-->
-                <!--                        <div class="products__news__box__info">-->
-                <!--                            <p class="products__news__box__date">22 December,2022 </p>-->
-                <!--                            <a href="#" class="products__news__box__link"><img src="img/product/_.svg" alt="arrow"-->
-                <!--                                                                               class="products__news__box__link__arrow products__news__box__link__arrow2"></a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                    <div class="products__news__box__item">-->
-                <!--                        <img class="products__news__box__item__img" src="img/fromBlogHTML/Photo12.svg" alt="new photo">-->
-                <!--                        <p class="blog__info__design">Interior Design</p>-->
-                <!--                        <div class="products__news__box__title">Best For Any Office & Business Interior-->
-                <!--                            <br/>Solution-->
-                <!--                        </div>-->
-                <!--                        <div class="products__news__box__info">-->
-                <!--                            <p class="products__news__box__date">25 December,2022 </p>-->
-                <!--                            <a href="#" class="products__news__box__link"><img src="img/product/_.svg" alt="arrow"-->
-                <!--                                                                               class="products__news__box__link__arrow"></a>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </div>-->
             </div>
         </div>
         <nav class="products__news__box__link__pages container">
@@ -202,35 +142,36 @@
     new Vue({
         el: '#app__blog',
         data: {
-            carts_design: [{
-                id: 0,
-                img: {
-                    src: 'img/productNews/Photo4.svg',
-                    alt: 'new photo',
-                },
-                title: `Let’s Get Solution For <br>Building Construction <br>Work`,
-                productBoxDate: '26 December,2022 ',
-                imgArrow: {
-                    src: 'img/product/_.svg',
-                    alt: 'arrow',
-                },
-                blog__info__design: 'Kitchan Design',
+            carts_design: [
+                {
+                    id: 0,
+                    img: {
+                        src: 'img/productNews/Photo4.svg',
+                        alt: 'new photo',
+                    },
+                    title: `Let’s Get Solution For <br>Building Construction <br>Work`,
+                    productBoxDate: '26 December,2022 ',
+                    imgArrow: {
+                        src: 'img/product/_.svg',
+                        alt: 'arrow',
+                    },
+                    blogInfoDesign: 'Kitchan Design',
 
-            },
+                },
                 {
                     id: 1,
                     img: {
                         src: 'img/productNews/Photo5.svg',
                         alt: 'new photo',
                     },
-                    title: `Low Cost Latest <br>Invented Interior <br>Designing
-Ideas.`,
+                    title: `Low Cost Latest Invented <br>Interior Designing
+<br>Ideas.`,
                     productBoxDate: '22 December,2022 ',
                     imgArrow: {
                         src: 'img/productNews/_1.svg',
                         alt: 'arrow',
                     },
-                    blog__info__design: 'Living Design',
+                    blogInfoDesign: 'Living Design',
 
                 },
                 {
@@ -246,7 +187,7 @@ Solution`,
                         src: 'img/product/_.svg',
                         alt: 'arrow',
                     },
-                    blog__info__design: 'Interior Design',
+                    blogInfoDesign: 'Interior Design',
 
                 },
                 {
@@ -261,7 +202,7 @@ Solution`,
                         src: 'img/product/_.svg',
                         alt: 'arrow',
                     },
-                    blog__info__design: 'Kitchan Design',
+                    blogInfoDesign: 'Kitchan Design',
                 }
                 , {
                     id: 4,
@@ -269,14 +210,14 @@ Solution`,
                         src: 'img/fromBlogHTML/Photo11.svg',
                         alt: 'new photo',
                     },
-                    title: `Low Cost Latest <br>Invented Interior <br>Designing
-Ideas.`,
+                    title: `Low Cost Latest Invented <br>Interior Designing
+<br>Ideas.`,
                     productBoxDate: '22 December,2022 ',
                     imgArrow: {
                         src: 'img/product/_.svg',
                         alt: 'arrow',
                     },
-                    blog__info__design: 'Living Design',
+                    blogInfoDesign: 'Living Design',
 
                 },
                 {
@@ -292,7 +233,7 @@ Solution`,
                         src: 'img/product/_.svg',
                         alt: 'arrow',
                     },
-                    blog__info__design: 'Interior Design',
+                    blogInfoDesign: 'Interior Design',
                 }
             ]
         },
