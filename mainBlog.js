@@ -1,5 +1,15 @@
 'use strict';
-// document.addEventListener('DOMContentLoaded', function () {
-//     document.querySelector('.posters__title').classList.add('tracking-in-expand');
-//     document.querySelector('.posters__button').classList.add('vibrate-1');
-// });
+
+
+// img:{src: 'img/productNews/Photo4.svg',
+//         alt:'new photo',
+//     title: `Let’s Get Solution For Building Construction <br>Work`,
+//     productBoxDate: '26 December,2022 ',
+//     imgArrow:
+// {
+//     src: 'img/product/_.svg',
+//         alt
+// :
+//     'arrow',
+// }
+// blog__info__design: 'Kitchan Design',
