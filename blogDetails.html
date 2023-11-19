@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+
+<div id="app__blog__details" class="app app__blog">
+    <header id="header" class="header">
+        <div class="header__block">
+            <div id="header__left" class="header__left">
+                <img src="img/Logo.svg" alt="Logo" class="header__logo__img"/>
+                <p class="header__Name">Interno</p>
+            </div>
+            <div id="header__right" class="header__right">
+                <nav id="nav" class="nav">
+                    <a href="index.html" id="header__link__pages1" class="header__link__pages link__pages">Home</a>
+                    <a href="#" id="header__link__pages2" class="header__link__pages link__pages">Project</a>
+                    <a href="blog.html" id="header__link__pages3" class="header__link__pages link__pages">Blog</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+    <main class="main" id="main">
+        <div id="banner" class="banner container__full">
+            <img id="banner__img" class="banner__img" src="img/blogDetails/blogDetailsPoster.svg"
+                 alt="banner__Background"/>
+        </div>
+        <div class="blog__filter__details container">
+            <div class="blog__filter__details__left">
+                <p class="blog__filter__details__left__title">Let’s Get Solution for Building
+                    Construction Work
+                </p>
+                <img class="blog__filter__details__left__img" src="img/blogDetails/blogDetailresult.svg"
+                     alt="detailsResult">
+                <div class="img__info">
+                    <p>26 December,2022 </p>
+                    <nav>
+                        <a href="#">Interior<span> / </span></a>
+                        <a href="index.html">Home<span> / </span></a>
+                        <a href="#">Decore</a>
+                    </nav>
+                </div>
+
+                <p class="blog__filter__details__desc">
+                    <span class="blog__filter__detalis__flex_start">Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae
+                    turpmaximus.posuere in.Contrary to
+                    popular belief.There are many variations of passages of Lorem Ipsum available, but the majority
+                    have suffered alteration in some form, by injecthumour, or randomised words which don't look
+                    even slightly believable.
+                    </span><span class="blog__filter__details__flex_end">Embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend
+                    to repeat predefined chunks as necessary.
+                        </span>
+                </p>
+                <div class="background__footnote">
+
+                    <p class="background__footnote__quotes">“</p>
+                    <p class="background__footnote__desc">
+                        The details are not the details.
+                        They make the design.
+                    </p>
+                </div>
+                <!--                <internet-list v-bind:tags="this.tags"></internet-list>-->
+                <div>
+                    <article v-for="(item,index) in filtersArticles" :key="index">
+                        <h3 class="blog__filter__details__article">{{item.title}}</h3>
+                        <p class="blog__filter__details__article__desc">{{item.description}}</p>
+                        <ul class="blog__filter__details__article__list">
+                            <li class="li__1" v-for="(itemList,indexList) in item.kitchen" :key="indexList">
+                                <p class="li__1__number">{{indexList + 1}}</p>
+                                <p class="li__1__desc">{{itemList}}</p>
+                            </li>
+                        </ul>
+                        <div>
+                            <img class="img__main__foot" :src=item.img alt="imgMainFooter">
+                            <p class="img__main__foot__desc">{{item.imgDescription}}</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <div class="blog__filter__details__right">
+                <p class="blog__filter__details__right__title">
+                    Tags
+                </p>
+                <!--                <tags-list v-bind:tags="this.tags"></tags-list>-->
+                <div class="tags__container">
+                    <p class="tags__container__btn" v-for="(item,index) in this.tags" :key="index"
+                       @click="isTrue(index)" >{{item.name}}</p>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer" class="footer">
+        <div id="footer__left" class="footer__left">
+            <nav id="footer__logo" class="footer__logo">
+                <img src="img/Logo.svg" alt="logo" class="footer__logo__img">
+                <p class="footer__logo__name">Interno</p>
+            </nav>
+            <div id="footer__left__description" class="footer__left__description">
+                It is a long established fact that a reader will be distracted lookings.
+            </div>
+            <nav id="footer__social__links" class="footer__social__links">
+                <a href="http://twitter.com" class="footer__social__links__twitter"><img
+                        src="img/socialLink/twitter.svg" alt="twitter logo"
+                        class="twitter"></a>
+                <a href="" class="footer__social__links__in"><img src="img/socialLink/in.svg" alt="in logo" class="in"></a>
+            </nav>
+        </div>
+        <nav id="footer__center" class="footer__center">
+            <p id="footer__center__title" class="footer__center__title">Pages</p>
+            <a id="footer__link__pages_1" class="footer__link__pages link__pages" href="index.html">Home</a>
+            <a id="footer__link__pages_2" class="footer__link__pages link__pages" href="#">Project</a>
+            <a id="footer__link__pages_3" class="footer__link__pages link__pages" href="blog.html">Blog</a>
+        </nav>
+        <div id="footer__right" class="footer__right">
+            <div id="footer__right__title" class="footer__right__title">Contact</div>
+            <div class="footer__right__description">
+                <p class="footer__right__address">55 East Birchwood Ave. Brooklyn, New York 11201</p><br>
+                <p class="footer__right__email">contact@interno.com</p><br>
+                <p class="footer__right__phoneNumber">(123) 456 - 7890</p>
+            </div>
+        </div>
+        <div class="footer__mock__bloc"></div>
+
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+
+    // Vue.component('internet-list', {
+    //     template: '<div><article v-for="(item,index) in filtersArticles" :key="index">' +
+    //         '<h3 class="blog__filter__details__article">{{item.title}}</h3>\n' +
+    //         '                    <p class="blog__filter__details__article__desc">{{item.description}}</p>' +
+    //         '<ul class="blog__filter__details__article__list" >\n' +
+    //         '                        <li class="li__1" v-for="(itemList,indexList) in item.kitchen" :key="indexList">\n' +
+    //         '                            <p class="li__1__number">{{indexList + 1}}</p>\n' +
+    //         '                            <p class="li__1__desc">{{itemList}}</p>\n' +
+    //         '                        </li> </ul>' +
+    //         '<div>\n' +
+    //         '                        <img class="img__main__foot" :src= item.img alt="imgMainFooter">\n' +
+    //         '                        <p class="img__main__foot__desc">{{item.imgDescription}}</p>\n' +
+    //         '                    </div>' +
+    //         '</article>' +
+    //         '</div>',
+    //     props: ['tags'],
+    //     data: function () {
+    //         return {
+    //             // tags: [
+    //             //     {
+    //             //         name: 'Kitchen',
+    //             //         isSelect: false,
+    //             //     }, {
+    //             //         name: 'Bedroom',
+    //             //         isSelect: false,
+    //             //     }, {
+    //             //         name: 'Building',
+    //             //         isSelect: false
+    //             //     }, {
+    //             //         name: 'Architecture',
+    //             //         isSelect: false
+    //             //     }, {
+    //             //         name: 'Kitchen Planning',
+    //             //         isSelect: false
+    //             //     }, {
+    //             //         name: 'Bedroom',
+    //             //         isSelect: false
+    //             //     },
+    //             // ],
+    //             data: [{
+    //                 name: 'Kitchen',
+    //                 title: 'Design sprints are great for Kitchen',
+    //                 description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+    //                     '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+    //                     '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+    //                     '                        have suffered.',
+    //
+    //                 kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.'],
+    //                 img: 'img/blogDetails/imgMainFooter.svg',
+    //                 imgDescription: '\n' +
+    //                     '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+    //                     '                            to\n' +
+    //                     '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+    //                     '                            majority\n' +
+    //                     '                            have suffered.\n' +
+    //                     '                        ',
+    //
+    //             }, {
+    //                 name: 'Building',
+    //                 title: 'Design sprints are great for Building',
+    //                 description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+    //                     '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+    //                     '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+    //                     '                        have suffered.',
+    //
+    //                 kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.'],
+    //                 img: 'img/blogDetails/imgMainFooter.svg',
+    //                 imgDescription: '\n' +
+    //                     '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+    //                     '                            to\n' +
+    //                     '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+    //                     '                            majority\n' +
+    //                     '                            have suffered.\n' +
+    //                     '                        ',
+    //
+    //             }, {
+    //                 name: 'Architecture',
+    //                 title: 'Design sprints are great for Architecture',
+    //                 description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+    //                     '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+    //                     '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+    //                     '                        have suffered.',
+    //
+    //                 kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.'],
+    //                 img: 'img/blogDetails/imgMainFooter.svg',
+    //                 imgDescription: '\n' +
+    //                     '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+    //                     '                            to\n' +
+    //                     '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+    //                     '                            majority\n' +
+    //                     '                            have suffered.\n' +
+    //                     '                        ',
+    //
+    //             }, {
+    //                 name: 'Bedroom',
+    //                 title: 'Design sprints are great for Bedrooms',
+    //                 description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+    //                     '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+    //                     '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+    //                     '                        have suffered.',
+    //
+    //                 kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+    //                 '                                Lorem Ipsum available,\n' +
+    //                 '                                but the majority have suffered.'],
+    //                 img: 'img/blogDetails/imgMainFooter.svg',
+    //                 imgDescription: '\n' +
+    //                     '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+    //                     '                            to\n' +
+    //                     '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+    //                     '                            majority\n' +
+    //                     '                            have suffered.\n' +
+    //                     '                        ',
+    //
+    //             }],
+    //
+    //
+    //         }
+    //     },
+    //     computed: {
+    //         filtersArticles() {
+    //             let temp = [];
+    //             for (let argument of this.tags) {
+    //                 if (argument.isSelect) {
+    //                     this.data.filter((element) => element.name === argument.name).forEach((el) => temp.push(el));
+    //                 }
+    //             }
+    //             return temp;
+    //
+    //         }
+    //     }
+    // });
+    // Vue.component('tags-list', {
+    //     props: ['tags'],
+    //     data: function () {
+    //         return {
+    //         }
+    //     },
+    //     template: '<div class="tags__container">\n' +
+    //         '                    <p class="tags__container__btn" v-for="(item,index) in this.tags" :key="index" @click="item.isSelect=!item.isSelect">{{item.name}}</p>' +
+    //         '</div>',
+    //     computed: {},
+    // });
+    new Vue({
+        el: '#app__blog__details',
+        data: {
+            tags: [
+                {
+                    name: 'Kitchen',
+                    isSelect: false,
+                }, {
+                    name: 'Bedroom',
+                    isSelect: false,
+                }, {
+                    name: 'Building',
+                    isSelect: false
+                }, {
+                    name: 'Architecture',
+                    isSelect: false
+                }, {
+                    name: 'Kitchen Planning',
+                    isSelect: false
+                }, {
+                    name: 'Bedroom',
+                    isSelect: false
+                },
+            ],
+            data: [{
+                name: 'Kitchen',
+                title: 'Design sprints are great for Kitchen',
+                description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+                    '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+                    '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+                    '                        have suffered.',
+
+                kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.'],
+                img: 'img/blogDetails/imgMainFooter.svg',
+                imgDescription: '\n' +
+                    '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+                    '                            to\n' +
+                    '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+                    '                            majority\n' +
+                    '                            have suffered.\n' +
+                    '                        ',
+
+            }, {
+                name: 'Building',
+                title: 'Design sprints are great for Building',
+                description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+                    '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+                    '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+                    '                        have suffered.',
+
+                kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.'],
+                img: 'img/blogDetails/imgMainFooter.svg',
+                imgDescription: '\n' +
+                    '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+                    '                            to\n' +
+                    '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+                    '                            majority\n' +
+                    '                            have suffered.\n' +
+                    '                        ',
+
+            }, {
+                name: 'Architecture',
+                title: 'Design sprints are great for Architecture',
+                description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+                    '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+                    '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+                    '                        have suffered.',
+
+                kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.'],
+                img: 'img/blogDetails/imgMainFooter.svg',
+                imgDescription: '\n' +
+                    '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+                    '                            to\n' +
+                    '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+                    '                            majority\n' +
+                    '                            have suffered.\n' +
+                    '                        ',
+
+            }, {
+                name: 'Bedroom',
+                title: 'Design sprints are great for Bedrooms',
+                description: 'Lorem ipsum dolor sit amet, adipiscing Aliquam eu\n' +
+                    '                        sem vitae turpmaximus.posuere in.Contrary to\n' +
+                    '                        popular belief.There are many variations of passages of Lorem Ipsum available, but the majority\n' +
+                    '                        have suffered.',
+
+                kitchen: ['Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
+                '                                Lorem Ipsum available,\n' +
+                '                                but the majority have suffered.'],
+                img: 'img/blogDetails/imgMainFooter.svg',
+                imgDescription: '\n' +
+                    '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
+                    '                            to\n' +
+                    '                            popular belief.There are many variations of passages of Lorem Ipsum available, but the\n' +
+                    '                            majority\n' +
+                    '                            have suffered.\n' +
+                    '                        ',
+
+            }],
+
+
+        },
+        methods: {
+            isTrue(index){
+                this.tags.forEach(element => element.isSelect = false);
+                this.tags[index].isSelect = true;
+            }
+        },
+        computed: {
+            filtersArticles() {
+                let temp = [];
+                for (let argument of this.tags) {
+                    if (argument.isSelect) {
+                        this.data.filter((element) => element.name === argument.name).forEach((el) => temp.push(el));
+                    }
+                }
+                return temp;
+            }
+        },
+    });
+
+
+</script>
+</body>
+</html>
