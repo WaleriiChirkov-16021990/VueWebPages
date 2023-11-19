@@ -91,7 +91,7 @@
                 <!--                <tags-list v-bind:tags="this.tags"></tags-list>-->
                 <div class="tags__container">
                     <p class="tags__container__btn" v-for="(item,index) in this.tags" :key="index"
-                       @click="item.isSelect=!item.isSelect">{{item.name}}</p>
+                       @click="isTrue(index)" >{{item.name}}</p>
                 </div>
             </div>
         </div>
@@ -421,7 +421,12 @@
 
 
         },
-        methods: {},
+        methods: {
+            isTrue(index){
+                this.tags.forEach(element => element.isSelect = false);
+                this.tags[index].isSelect = true;
+            }
+        },
         computed: {
             filtersArticles() {
                 let temp = [];
