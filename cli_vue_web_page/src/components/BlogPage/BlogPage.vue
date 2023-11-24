@@ -16,7 +16,8 @@ export default {
           productBoxDate: '26 December,2022 ',
           imgArrow: {
             // src: '/src/assets/img/productNews/_1.svg',
-            src: 'img/productNews/_1.svg',
+            src: '../../../src/assets/img/productNews/_1.svg',
+            // src: 'img/productNews/_1.svg',
             alt: 'arrow',
           },
           blogInfoDesign: 'Kitchan Design',
@@ -159,7 +160,7 @@ Solution`,
         <div id="products__news__box" class="blog__products__news__box container">
           <div v-for="(item,index) in this.cartsDesign" :key="item.id" @mouseover="shift(index)"
                class="products__news__box__item">
-            <img :src="item.img.src.toString()" :alt="item.img.alt" class="products__news__box__item__img">
+            <img :src="item.img.src" :alt="item.img.alt" class="products__news__box__item__img">
             <p class="blog__info__design">{{ item.blogInfoDesign }}</p>
             <div class="products__news__box__title" v-html="item.title"></div>
             <div class="products__news__box__info">
