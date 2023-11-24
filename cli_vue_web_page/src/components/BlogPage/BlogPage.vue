@@ -2,22 +2,19 @@
 
 export default {
   name: 'BlogPage',
-  data:function () {
+  data: function () {
     return {
       cartsDesign: [
         {
           id: 0,
           img: {
-            // src: 'cli_vue_web_page/src/assets/img/productNews/Photo4.svg',
             src: 'img/productNews/Photo4.svg',
             alt: 'new photo',
           },
           title: `Let’s Get Solution For <br>Building Construction <br>Work`,
           productBoxDate: '26 December,2022 ',
           imgArrow: {
-            // src: '/src/assets/img/productNews/_1.svg',
-            src: '../../../src/assets/img/productNews/_1.svg',
-            // src: 'img/productNews/_1.svg',
+            src: 'img/productNews/_1.svg',
             alt: 'arrow',
           },
           blogInfoDesign: 'Kitchan Design',
@@ -42,7 +39,7 @@ export default {
         {
           id: 2,
           img: {
-            src: '../../assets/img/productNews/Photo6.svg',
+            src: 'img/productNews/Photo6.svg',
             alt: 'new photo',
           },
           title: `Best For Any Office & <br>Business Interior <br>
@@ -58,7 +55,7 @@ Solution`,
         {
           id: 3,
           img: {
-            src: '../../assets/img/fromBlogHTML/Photo10.svg',
+            src: 'img/fromBlogHTML/Photo10.svg',
             alt: 'new photo',
           },
           title: `Let’s Get Solution For <br>Building Construction <br>Work`,
@@ -191,6 +188,9 @@ Solution`,
   </main>
 </template>
 <style scoped lang="css">
+
+@import url('@/assets/style2.css');
+
 * {
   margin: 0;
   padding: 0;

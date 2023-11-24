@@ -39,7 +39,7 @@ export default {
         '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
         '                                Lorem Ipsum available,\n' +
         '                                but the majority have suffered.'],
-        img: '../../assets/img/blogDetails/imgMainFooter.svg',
+        img: 'img/blogDetails/imgMainFooter.svg',
         imgDescription: '\n' +
             '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
             '                            to\n' +
@@ -63,7 +63,7 @@ export default {
         '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
         '                                Lorem Ipsum available,\n' +
         '                                but the majority have suffered.'],
-        img: '../../assets/img/blogDetails/imgMainFooter.svg',
+        img: 'img/blogDetails/imgMainFooter.svg',
         imgDescription: '\n' +
             '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
             '                            to\n' +
@@ -87,7 +87,7 @@ export default {
         '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
         '                                Lorem Ipsum available,\n' +
         '                                but the majority have suffered.'],
-        img: '../../assets/img/blogDetails/imgMainFooter.svg',
+        img: 'img/blogDetails/imgMainFooter.svg',
         imgDescription: '\n' +
             '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
             '                            to\n' +
@@ -111,7 +111,7 @@ export default {
         '                                but the majority have suffered.', 'Contrary to popular belief.There are many variations of passages of\n' +
         '                                Lorem Ipsum available,\n' +
         '                                but the majority have suffered.'],
-        img: '../../assets/img/blogDetails/imgMainFooter.svg',
+        img: 'img/blogDetails/imgMainFooter.svg',
         imgDescription: '\n' +
             '                            Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpmaximus.posuere in.Contrary\n' +
             '                            to\n' +
