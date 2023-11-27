@@ -7,8 +7,11 @@ export default {
   props: ['poster'],
   data() {
     return {
-      navigation:[{name:'Home', href:'#'},{name:'Blog', href:'#'},]
+      navigation:[{name:'Home', href:'#'},]
     }
+  },
+  created() {
+    this.navigation.push({name: this.poster.thisChapter, href: '#'})
   }
 }
 

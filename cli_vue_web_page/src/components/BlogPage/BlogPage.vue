@@ -105,6 +105,7 @@ Solution`,
       poster : {
         image:'img/fromBlogHTML/posters/Photo7.svg',
         title: 'Articles & News',
+        thisChapter: 'Blog'
       }
     };
   },

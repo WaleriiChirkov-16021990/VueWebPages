@@ -4,6 +4,7 @@
     <MainPage></MainPage>
     <BlogPage></BlogPage>
     <BlogPageDetails></BlogPageDetails>
+    <ProjectPage/>
     <FooterComponent/>
   </div>
 </template>
@@ -14,10 +15,12 @@ import BlogPage from '@/components/BlogPage/BlogPage.vue';
 import BlogPageDetails from '@/components/BlogDetailsPage/BlogDetailsPage.vue';
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent/FooterComponent.vue";
+import ProjectPage from "@/components/ProjectPage/ProjectPage.vue";
 
 export default {
   name: 'App',
   components: {
+    ProjectPage,
     FooterComponent,
     HeaderComponent,
     MainPage,

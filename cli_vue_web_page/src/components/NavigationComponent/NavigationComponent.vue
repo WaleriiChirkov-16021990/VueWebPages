@@ -2,6 +2,14 @@
 export default {
   name: "NavigationComponent",
   props: ['navigationLinks'],
+  data() {
+    return {
+      thisChapter : '',
+    }
+  },
+  created() {
+    this.thisChapter = this.navigationLinks.thisChapter;
+  }
 }
 </script>
 
