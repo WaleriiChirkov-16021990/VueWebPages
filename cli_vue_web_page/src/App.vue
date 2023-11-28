@@ -4,7 +4,7 @@
     <MainPage></MainPage>
     <BlogPage></BlogPage>
     <BlogPageDetails></BlogPageDetails>
-    <ProjectPage/>
+    <project-page/>
     <FooterComponent/>
   </div>
 </template>
@@ -33,4 +33,5 @@ export default {
 
 <style scoped lang="css">
 @import url(@/assets/style2.css);
+
 </style>
