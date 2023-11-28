@@ -81,18 +81,55 @@ export default {
 <template>
   <main class="project-page">
     <PosterHeaderImage :poster="poster"/>
-    <div class="cart__block local__container">
-      <div class="cart__block__tab__container">
+
+    <div class="cart__block container">
+      <div class="cart__block__tab__container local__container">
         <button class="cart__block__tab__button">Bathroom</button>
         <button class="cart__block__tab__button cart__block__tab__button__2">Bed Room</button>
         <button class="cart__block__tab__button">Kitchan</button>
         <button class="cart__block__tab__button">Living Area</button>
       </div>
       <div class="cart__block__project__container">
-        <div class="cart__block__project__header">
+        <div class="cart__block__project__item1">
+          <img src="@/assets/img/projectPage/Photo1.svg" alt="Photo1">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item2">
+          <img src="@/assets/img/projectPage/Photo2.svg" alt="Photo2">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item3">
+          <img src="@/assets/img/projectPage/Photo3.svg" alt="Photo3">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item4">
+          <img src="@/assets/img/projectPage/Photo4.svg" alt="Photo4">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p></div>
+        <div class="cart__block__project__item5">
+          <img src="@/assets/img/projectPage/Photo5.svg" alt="Photo5">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item6">
+          <img src="@/assets/img/projectPage/Photo6.svg" alt="Photo6">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item7">
+          <img src="@/assets/img/projectPage/Photo7.svg" alt="Photo7">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
+        </div>
+        <div class="cart__block__project__item8">
+          <img src="@/assets/img/projectPage/Photo8.svg" alt="Photo8">
+          <p>Minimal Bedroom</p>
+          <p>Decor / Artchitecture</p>
         </div>
       </div>
-
     </div>
   </main>
 </template>
@@ -107,7 +144,8 @@ export default {
   display: flex;
   width: 1201px;
   flex-direction: column;
-//align-items: center; justify-content: center; gap: 61px;
+align-content: center;
+  justify-content: center; gap: 61px;
 }
 
 .cart__block__tab__container {
@@ -152,5 +190,11 @@ export default {
   letter-spacing: 0.36px;
 }
 
+.cart__block__project__container {
+  display:grid;
+  max-width: 1170px;
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(585px, 586px));
+}
 
 </style>
