@@ -194,7 +194,32 @@ align-content: center;
   display:grid;
   max-width: 1170px;
   width: 100%;
-  grid-template-columns: repeat(2, minmax(585px, 586px));
+  grid-template-columns: max-content max-content;
+  grid-template-rows: max-content max-content max-content max-content max-content max-content max-content;
 }
 
+.cart__block__project__item1 {
+  grid-column: 1 / 1;
+  grid-row: 1 / span 1;
+  min-width: 100px;
+  min-height: 100px;
+}
+.cart__block__project__item2 {
+  grid-column: 2 / 2;
+  grid-row: 1 / 1;
+  max-width: 586px;
+  max-height: 522px;
+}
+.cart__block__project__item3 {
+  grid-column: 1/ 1;
+  grid-row: 2 / 2;
+  min-width: 100px;
+  min-height: 100px;
+}
+.cart__block__project__item4 {
+  grid-column: 2/ 2;
+  grid-row: 2 / span 1;
+  min-width: 100px;
+  min-height: 100px;
+}
 </style>
