@@ -3,152 +3,12 @@ import PosterHeaderImage from "@/components/PosterHeaderImage/PosterHeaderImage.
 
 export default {
   name: "ProjectPage",
-  // props:['poster','cartsBlockProject','tabs'],
+  props:['poster','cartsBlockProject'],
   components: {PosterHeaderImage},
   data() {
     return {
-      poster: {
-        image: 'img/projectPage/Banner.svg',
-        title: 'Our Project',
-        thisChapter: 'Project'
-      },
-      cartsBlockProject: [
-        {
-          id: 1,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo1.svg',
-          title: 'Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: true,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 3,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo3.svg',
-          title: 'Classic Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 5,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo5.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 7,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo7.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 2,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo2.svg',
-          title: 'Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 4,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo4.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: true,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 6,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo6.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 8,
-          nameTab: 'Bed Room',
-          image: 'img/projectPage/Photo8.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 9,
-          nameTab: 'Bathroom',
-          image: 'img/projectPage/Photo1.svg',
-          title: 'Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: true,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 10,
-          nameTab: 'Bathroom',
-          image: 'img/projectPage/Photo3.svg',
-          title: 'Classic Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 11,
-          nameTab: 'Living Area',
-          image: 'img/projectPage/Photo5.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 12,
-          nameTab: 'Kitchan',
-          image: 'img/projectPage/Photo7.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 13,
-          nameTab: 'Kitchan',
-          image: 'img/projectPage/Photo2.svg',
-          title: 'Minimal Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-
-        }, {
-          id: 14,
-          nameTab: 'Kitchan',
-          image: 'img/projectPage/Photo4.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: true,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 15,
-          nameTab: 'Kitchan',
-          image: 'img/projectPage/Photo6.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }, {
-          id: 16,
-          nameTab: 'Kitchan',
-          image: 'img/projectPage/Photo8.svg',
-          title: 'Modern Bedroom',
-          description: 'Decor / Artchitecture',
-          isStar: false,
-          starPicture: 'img/projectPage/Star3.svg',
-        }
-      ],
+      myPoster: {},
+      myCartsBlockProject: [],
       tabs: [
         {
           id: 1,
@@ -170,6 +30,10 @@ export default {
       ]
     }
   },
+created() {
+    this.myPoster = this.poster;
+    this.myCartsBlockProject = this.cartsBlockProject;
+},
   methods: {
     toggleTabs(idTabs) {
       this.tabs.forEach(el => {
@@ -186,7 +50,7 @@ export default {
       let tempData;
       this.tabs.forEach(el => {
         if (el.isTrue) {
-          tempData = this.cartsBlockProject.filter(elCart => elCart.nameTab === el.name);
+          tempData = this.myCartsBlockProject.filter(elCart => elCart.nameTab === el.name);
         }
       })
       return tempData;
@@ -197,7 +61,7 @@ export default {
 
 <template>
   <main class="project-page">
-    <PosterHeaderImage :poster="poster"/>
+    <PosterHeaderImage :poster="myPoster"/>
     <div class="cart__block container">
       <div class="cart__block__tab__centered">
         <div class="cart__block__tab__container">
