@@ -37,11 +37,7 @@ created() {
   methods: {
     toggleTabs(idTabs) {
       this.tabs.forEach(el => {
-        if (el.id === idTabs) {
-          el.isTrue = true;
-        } else {
-          el.isTrue = false;
-        }
+        el.isTrue = el.id === idTabs;
       })
     },
   },
