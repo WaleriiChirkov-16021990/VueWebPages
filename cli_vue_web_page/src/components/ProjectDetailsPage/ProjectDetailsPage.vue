@@ -1,8 +1,10 @@
 <script>
 import {mapGetters, mapMutations, mapState} from "vuex";
+import SliderImage from "@/components/SliderImg/SliderImage.vue";
 
 export default {
   name: "ProjectDetailsPage",
+  components: {SliderImage},
   methods: {
     ...mapMutations(['SET_PROJECT_DETAILS_DATA'])
   },
@@ -27,7 +29,7 @@ export default {
       </p>
     </div>
     <div class="slider">
-<!--      <future-slider :items="projectDetailsData.sliderPhoto"/>-->
+      <slider-image/>
     </div>
 
   </main>
