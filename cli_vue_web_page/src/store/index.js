@@ -33,7 +33,7 @@ export default new Vuex.Store({
                 '</svg>',
             sliderPhoto: [{image: 'img/projectDetailsPage/slide1.svg'},{image: 'img/projectDetailsPage/slide2.svg'},{image:'img/projectDetailsPage/slide3.svg'},],
             bottomPhotoSlider: 'img/projectDetailsPage/pngwing1.svg',
-
+            // slideIndex: 1,
         },
     },
     mutations: {

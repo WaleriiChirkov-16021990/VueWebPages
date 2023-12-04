@@ -16,9 +16,9 @@ export default {
 </script>
 
 <template>
-  <main class="project__details__page">
-    <div class="poster__image">
-      <img :src="projectDetailsData.posterImgSrc" alt="">
+  <main class="project__details__page container">
+    <div class="poster__image ">
+      <img :src="projectDetailsData.posterImgSrc" alt="posterImg">
     </div>
     <div class="poster__description">
       <p class="title__text">
@@ -36,5 +36,39 @@ export default {
 </template>
 
 <style scoped lang="css">
+.project__details__page {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.poster__image {
+  margin-bottom: 175px;
+}
+
+.title__text {
+  color: #292F36;
+  font-family: DM Serif Display, sans-serif;
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 62.5px */
+  letter-spacing: 1px;
+  width: 565px;
+  margin-bottom: 11px;
+}
+
+.description__text {
+  color: #4D5053;
+  font-family: Jost, sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 33px */
+  letter-spacing: 0.22px;
+  width: 658px;
+  margin-bottom: 70px;
+}
 
 </style>

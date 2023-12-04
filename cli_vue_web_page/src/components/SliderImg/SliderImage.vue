@@ -3,15 +3,17 @@ import {mapGetters, mapMutations, mapState} from "vuex";
 
 export default {
   name: "SliderImage",
-  props: ['images'],
   data() {
     return {
       slideIndex: 1,
     }
   },
   methods: {
-    plusSlides(n) {
-      this.showSlides(this.slideIndex += n);
+    plusSlides() {
+      this.showSlides(this.slideIndex += 1);
+    },
+    subtractSlides() {
+      this.showSlides(this.slideIndex -= 1);
     },
     currentSlide(n) {
       this.showSlides(this.slideIndex = n);
@@ -38,38 +40,33 @@ export default {
     },
     ...mapMutations(['SET_PROJECT_DETAILS_DATA'])
   },
-  computed:{
+  computed: {
     ...mapState(['projectDetailsData']),
     ...mapGetters(['getProjectDetails']),
-
-  },
+  }
 }
 </script>
 
 <template>
   <div class="slider-container">
-    <div class="slider-wrapper fade" v-for="(item,index) in projectDetailsData.sliderPhoto" :key="index">
-      <div class="number-tex">{{index + 1}}/{{projectDetailsData.sliderPhoto.length}}</div>
+    <div class="slider-wrapper fade" v-for="(item,index) in this.projectDetailsData.sliderPhoto" :key="index">
+      <div class="number-tex">{{ index + 1 }}/{{ projectDetailsData.sliderPhoto.length }}</div>
       <img :src="item.image" style="width: 100%;" alt="img-one" class="img-one">
     </div>
-    <a class="prev" @click="plusSlides(-1)">&#10094;</a>
-    <a class="next" @click="plusSlides(1)">&#10095;</a>
+    <a class="prev" @click="subtractSlides">&#10094;</a>
+    <a class="next" @click="plusSlides">&#10095;</a>
     <div style="text-align: center;" class="dots_container">
-      <span class="dot" @click="currentSlide(1)"></span>
-      <span class="dot" @click="currentSlide(2)"></span>
-      <span class="dot active" @click="currentSlide(3)"></span>
+      <span class="dot" v-for="(item,index) in this.projectDetailsData.sliderPhoto" :key="index"
+            @click="currentSlide(index + 1)"></span>
     </div>
-    document.addEventListener('DOMContentLoaded', function () {
-      {{this.showSlides}}
-    });
   </div>
 </template>
 
 <style scoped lang="css">
 .slider-container {
   position: relative;
-  margin: 0 auto;
-  max-width: 1000px;
+  margin: 0 auto 100px auto;
+  max-width: 1201px;
 }
 
 .prev, .next {
@@ -96,14 +93,13 @@ export default {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
+.img-one {
+  border-radius: 70px;
+  background: #C4C4C4;
+  width: 1201px;
+  height: 799px;
+  flex-shrink: 0;
+
 }
 
 .dot {
