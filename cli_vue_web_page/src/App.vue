@@ -5,6 +5,7 @@
     <BlogPage></BlogPage>
     <BlogPageDetails></BlogPageDetails>
     <project-page :poster="poster" :carts-block-project="cartsBlockProject"/>
+    <project-details-page/>
     <FooterComponent/>
   </div>
 </template>
@@ -16,10 +17,13 @@ import BlogPageDetails from '@/components/BlogDetailsPage/BlogDetailsPage.vue';
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent/FooterComponent.vue";
 import ProjectPage from "@/components/ProjectPage/ProjectPage.vue";
+import { mapGetters, mapMutations, mapState} from "vuex";
+import ProjectDetailsPage from "@/components/ProjectDetailsPage/ProjectDetailsPage.vue";
 
 export default {
   name: 'App',
   components: {
+    ProjectDetailsPage,
     ProjectPage,
     FooterComponent,
     HeaderComponent,
@@ -34,7 +38,15 @@ export default {
         title: 'Our Project',
         thisChapter: 'Project'
       },
-      cartsBlockProject: [
+      // cartsBlockProject: [],
+    }
+  },
+  // mounted() {
+  //   this.fetchData();
+  // },
+  methods: {
+    fetchData() {
+      return [
         {
           id: 1,
           nameTab: 'Bed Room',
@@ -170,10 +182,24 @@ export default {
           isStar: false,
           starPicture: 'img/projectPage/Star3.svg',
         }
-      ]
-    }
+      ];
+    },
+    ...mapMutations(['SET_CARTS_BLOCK_PROJECT','ADD_CARTS_BLOCK_PROJECT']),
+    addNewData(data) {
+      this.ADD_CARTS_BLOCK_PROJECT(data);
+    },
   },
-  methods: {}
+  created() {
+    // this.cartsBlockProject = this.fetchData();
+
+    this.SET_CARTS_BLOCK_PROJECT(this.fetchData())
+  },
+  computed:{
+    ...mapState(['cartsBlockProject']),
+    ...mapGetters(['getCartsBlockProject','getFullBlockProjectId']),
+    // ...mapActions(['fetchData']),
+
+  }
 }
 </script>
 
