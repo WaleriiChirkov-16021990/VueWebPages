@@ -1,9 +1,10 @@
 <script>
 import PosterHeaderImage from "@/components/PosterHeaderImage/PosterHeaderImage.vue";
+import {mapGetters, mapMutations, mapState} from "vuex";
 
 export default {
   name: "ProjectPage",
-  props:['poster','cartsBlockProject'],
+  props: ['poster', 'cartsBlockProject'],
   components: {PosterHeaderImage},
   data() {
     return {
@@ -30,16 +31,18 @@ export default {
       ]
     }
   },
-created() {
+  created() {
     this.myPoster = this.poster;
     this.myCartsBlockProject = this.cartsBlockProject;
-},
+  },
   methods: {
     toggleTabs(idTabs) {
       this.tabs.forEach(el => {
         el.isTrue = el.id === idTabs;
       })
     },
+    ...mapMutations(['SET_CARTS_BLOCK_PROJECT']),
+
   },
   computed: {
     filteredInputStreamData() {
@@ -51,7 +54,11 @@ created() {
       })
       return tempData;
     },
-  }
+    ...mapState(['cartsBlockProject', 'poster']),
+    ...mapGetters(['getCartsBlockProject']),
+    // ...mapActions(['fetchData']),
+
+  },
 }
 </script>
 

@@ -42,6 +42,15 @@ export default new Router({
             path: "/footer-component",
             name: "FooterComponent",
             component: () => import("@/components/FooterComponent/FooterComponent.vue")
+        },
+        {
+            path: "/not-found",
+            name: "NotFound",
+            component: () => import("@/components/NotFound/NofFound.vue")
+        },
+        {
+            path: "*",
+            redirect: "/not-found"
         }
     ]
 });
