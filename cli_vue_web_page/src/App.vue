@@ -1,35 +1,22 @@
 <template>
   <div id="app" class="app">
-    <HeaderComponent/>
-    <MainPage></MainPage>
-    <BlogPage></BlogPage>
-    <BlogPageDetails></BlogPageDetails>
-    <project-page :poster="poster" :carts-block-project="cartsBlockProject"/>
-    <project-details-page/>
-    <FooterComponent/>
+    <header-component/>
+    <router-view />
+    <footer-component/>
   </div>
 </template>
 
 <script>
-import MainPage from '@/components/MainPage/MainPage.vue';
-import BlogPage from '@/components/BlogPage/BlogPage.vue';
-import BlogPageDetails from '@/components/BlogDetailsPage/BlogDetailsPage.vue';
+
+import {mapGetters, mapMutations, mapState} from "vuex";
 import HeaderComponent from "@/components/HeaderComponent/HeaderComponent.vue";
 import FooterComponent from "@/components/FooterComponent/FooterComponent.vue";
-import ProjectPage from "@/components/ProjectPage/ProjectPage.vue";
-import { mapGetters, mapMutations, mapState} from "vuex";
-import ProjectDetailsPage from "@/components/ProjectDetailsPage/ProjectDetailsPage.vue";
 
 export default {
   name: 'App',
   components: {
-    ProjectDetailsPage,
-    ProjectPage,
     FooterComponent,
-    HeaderComponent,
-    MainPage,
-    BlogPage,
-    BlogPageDetails
+    HeaderComponent
   },
   data() {
     return{
@@ -38,12 +25,8 @@ export default {
         title: 'Our Project',
         thisChapter: 'Project'
       },
-      // cartsBlockProject: [],
     }
   },
-  // mounted() {
-  //   this.fetchData();
-  // },
   methods: {
     fetchData() {
       return [
@@ -193,6 +176,7 @@ export default {
     // this.cartsBlockProject = this.fetchData();
 
     this.SET_CARTS_BLOCK_PROJECT(this.fetchData())
+    this.$router.push({name: 'MainPage'});
   },
   computed:{
     ...mapState(['cartsBlockProject']),

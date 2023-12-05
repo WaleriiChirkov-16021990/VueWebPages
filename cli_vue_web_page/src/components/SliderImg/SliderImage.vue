@@ -8,6 +8,9 @@ export default {
       slideIndex: 1,
     }
   },
+  mounted() {
+    this.showSlides(this.slideIndex);
+  },
   methods: {
     plusSlides() {
       this.showSlides(this.slideIndex += 1);
