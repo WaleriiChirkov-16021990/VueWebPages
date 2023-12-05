@@ -24,9 +24,12 @@ export default {
     </div>
     <nav id="footer__center" class="footer__center">
       <p id="footer__center__title" class="footer__center__title">Pages</p>
-      <a id="footer__link__pages_1" class="footer__link__pages link__pages" href="#">Home</a>
-      <a id="footer__link__pages_2" class="footer__link__pages link__pages" href="#">Project</a>
-      <a id="footer__link__pages_3" class="footer__link__pages link__pages" href="#">Blog</a>
+<!--      <a id="footer__link__pages_1" class="footer__link__pages link__pages" href="#">Home</a>-->
+<!--      <a id="footer__link__pages_2" class="footer__link__pages link__pages" href="#">Project</a>-->
+<!--      <a id="footer__link__pages_3" class="footer__link__pages link__pages" href="#">Blog</a>-->
+      <router-link to="/" class="footer__link__pages link__pages">Home</router-link>
+      <router-link to="/project-details-page" class="footer__link__pages link__pages">Details Page</router-link>
+      <router-link to="/blog-page" class="footer__link__pages link__pages">Blog</router-link>
     </nav>
     <div class="footer__mock__bloc"></div>
     <div id="footer__right" class="footer__right">

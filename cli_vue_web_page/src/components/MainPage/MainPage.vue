@@ -187,42 +187,7 @@ Solution`,
         <div id="products__news__box" class="products__news__box">
           <DesignCartComponent v-for="(items,index) in cartsDesign" :key="index" :item="items"
                                class="products__news__box__item"></DesignCartComponent>
-          <!--          <div class="products__news__box__item">-->
-          <!--            <img class="products__news__box__item__img" src="../../../src/assets/img/productNews/Photo4.svg" alt="new photo">-->
-          <!--            <div class="products__news__box__title">Let’s Get Solution For Building Construction <br>Work-->
-          <!--            </div>-->
-          <!--            <div class="products__news__box__info">-->
-          <!--              <p class="products__news__box__date">26 December,2022 </p>-->
-          <!--              <a href="#" class="products__news__box__link"><img src="../../../src/assets/img/product/_.svg" alt="arrow"-->
-          <!--                                                                 class="products__news__box__link__arrow"></a>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="products__news__box__item products__news__box__item2">-->
-          <!--            <img class="products__news__box__item__img" src="../../../src/assets/img/productNews/Photo5.svg" alt="new photo">-->
-          <!--            <p class="blog__info__design">Living Design</p>-->
-          <!--            <div class="products__news__box__title">Low Cost Latest Invented Interior Designing-->
-          <!--              <br/>Ideas.-->
-          <!--            </div>-->
-          <!--            <div class="products__news__box__info">-->
-          <!--              <p class="products__news__box__date">22 December,2022 </p>-->
-          <!--              <a href="#" class="products__news__box__link"><img src="../../../src/assets/img/productNews/_1.svg" alt="arrow"-->
-          <!--                                                                 class="products__news__box__link__arrow products__news__box__link__arrow2"></a>-->
-          <!--            </div>-->
-          <!--          </div>-->
-          <!--          <div class="products__news__box__item">-->
-          <!--            <img class="products__news__box__item__img" src="../../../src/assets/img/productNews/Photo6.svg" alt="new photo">-->
-          <!--            <p class="blog__info__design">Interior Design</p>-->
-          <!--            <div class="products__news__box__title">Best For Any Office & Business Interior-->
-          <!--              <br/>Solution-->
-          <!--            </div>-->
-          <!--            <div class="products__news__box__info">-->
-          <!--              <p class="products__news__box__date">25 December,2022 </p>-->
-          <!--              <a href="#" class="products__news__box__link"><img src="../../../src/assets/img/product/_.svg" alt="arrow"-->
-          <!--                                                                 class="products__news__box__link__arrow"></a>-->
-          <!--            </div>-->
-          <!--          </div>-->
         </div>
-
       </div>
     </div>
   </main>

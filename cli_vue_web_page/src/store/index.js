@@ -6,7 +6,6 @@ Vue.use(Vuex);
 export default new Vuex.Store({
     state: {
         // начальное состояние
-        cartsBlockProject: [],
         projectDetailsData: {
             posterImgSrc: 'img/projectDetailsPage/PhotoProjectDetails.svg',
             titlePoster: 'Minimal Look Bedrooms',
@@ -31,9 +30,151 @@ export default new Vuex.Store({
                 '    </filter>\n' +
                 '  </defs>\n' +
                 '</svg>',
-            sliderPhoto: [{image: 'img/projectDetailsPage/slide1.svg'},{image: 'img/projectDetailsPage/slide2.svg'},{image:'img/projectDetailsPage/slide3.svg'},],
+            sliderPhoto: [{image: 'img/projectDetailsPage/slide1.svg'}, {image: 'img/projectDetailsPage/slide2.svg'}, {image: 'img/projectDetailsPage/slide3.svg'},],
             bottomPhotoSlider: 'img/projectDetailsPage/pngwing1.svg',
             // slideIndex: 1,
+        },
+        cartsBlockProject: [
+            {
+                id: 1,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo1.svg',
+                title: 'Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: true,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 3,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo3.svg',
+                title: 'Classic Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 5,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo5.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 7,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo7.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 2,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo2.svg',
+                title: 'Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 4,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo4.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: true,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 6,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo6.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 8,
+                nameTab: 'Bed Room',
+                image: 'img/projectPage/Photo8.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 9,
+                nameTab: 'Bathroom',
+                image: 'img/projectPage/Photo1.svg',
+                title: 'Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: true,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 10,
+                nameTab: 'Bathroom',
+                image: 'img/projectPage/Photo3.svg',
+                title: 'Classic Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 11,
+                nameTab: 'Living Area',
+                image: 'img/projectPage/Photo5.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 12,
+                nameTab: 'Kitchan',
+                image: 'img/projectPage/Photo7.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 13,
+                nameTab: 'Kitchan',
+                image: 'img/projectPage/Photo2.svg',
+                title: 'Minimal Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+
+            }, {
+                id: 14,
+                nameTab: 'Kitchan',
+                image: 'img/projectPage/Photo4.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: true,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 15,
+                nameTab: 'Kitchan',
+                image: 'img/projectPage/Photo6.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }, {
+                id: 16,
+                nameTab: 'Kitchan',
+                image: 'img/projectPage/Photo8.svg',
+                title: 'Modern Bedroom',
+                description: 'Decor / Artchitecture',
+                isStar: false,
+                starPicture: 'img/projectPage/Star3.svg',
+            }
+        ],
+        poster: {
+            image: 'img/projectPage/Banner.svg',
+            title: 'Our Project',
+            thisChapter: 'Project'
         },
     },
     mutations: {
@@ -49,149 +190,149 @@ export default new Vuex.Store({
         },
     },
     // actions: {
-        // методы для асинхронных операций
-        // fetchData({commit}) {
-        //     setTimeout(() => {
-        //         const cartsBlockProject = [
-        //             {
-        //                 id: 1,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo1.svg',
-        //                 title: 'Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: true,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 3,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo3.svg',
-        //                 title: 'Classic Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 5,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo5.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 7,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo7.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 2,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo2.svg',
-        //                 title: 'Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 4,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo4.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: true,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 6,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo6.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 8,
-        //                 nameTab: 'Bed Room',
-        //                 image: 'img/projectPage/Photo8.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 9,
-        //                 nameTab: 'Bathroom',
-        //                 image: 'img/projectPage/Photo1.svg',
-        //                 title: 'Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: true,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 10,
-        //                 nameTab: 'Bathroom',
-        //                 image: 'img/projectPage/Photo3.svg',
-        //                 title: 'Classic Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 11,
-        //                 nameTab: 'Living Area',
-        //                 image: 'img/projectPage/Photo5.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 12,
-        //                 nameTab: 'Kitchan',
-        //                 image: 'img/projectPage/Photo7.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 13,
-        //                 nameTab: 'Kitchan',
-        //                 image: 'img/projectPage/Photo2.svg',
-        //                 title: 'Minimal Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //
-        //             }, {
-        //                 id: 14,
-        //                 nameTab: 'Kitchan',
-        //                 image: 'img/projectPage/Photo4.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: true,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 15,
-        //                 nameTab: 'Kitchan',
-        //                 image: 'img/projectPage/Photo6.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }, {
-        //                 id: 16,
-        //                 nameTab: 'Kitchan',
-        //                 image: 'img/projectPage/Photo8.svg',
-        //                 title: 'Modern Bedroom',
-        //                 description: 'Decor / Artchitecture',
-        //                 isStar: false,
-        //                 starPicture: 'img/projectPage/Star3.svg',
-        //             }
-        //         ]
-        //         commit('SET_CARTS_BLOCK_PROJECT', cartsBlockProject);
-        //     }, 0);
-        // }
+    // // методы для асинхронных операций
+    // fetchData({commit}) {
+    //     setTimeout(() => {
+    //         const cartsBlockProject = [
+    //             {
+    //                 id: 1,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo1.svg',
+    //                 title: 'Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: true,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 3,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo3.svg',
+    //                 title: 'Classic Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 5,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo5.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 7,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo7.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 2,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo2.svg',
+    //                 title: 'Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 4,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo4.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: true,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 6,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo6.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 8,
+    //                 nameTab: 'Bed Room',
+    //                 image: 'img/projectPage/Photo8.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 9,
+    //                 nameTab: 'Bathroom',
+    //                 image: 'img/projectPage/Photo1.svg',
+    //                 title: 'Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: true,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 10,
+    //                 nameTab: 'Bathroom',
+    //                 image: 'img/projectPage/Photo3.svg',
+    //                 title: 'Classic Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 11,
+    //                 nameTab: 'Living Area',
+    //                 image: 'img/projectPage/Photo5.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 12,
+    //                 nameTab: 'Kitchan',
+    //                 image: 'img/projectPage/Photo7.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 13,
+    //                 nameTab: 'Kitchan',
+    //                 image: 'img/projectPage/Photo2.svg',
+    //                 title: 'Minimal Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //
+    //             }, {
+    //                 id: 14,
+    //                 nameTab: 'Kitchan',
+    //                 image: 'img/projectPage/Photo4.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: true,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 15,
+    //                 nameTab: 'Kitchan',
+    //                 image: 'img/projectPage/Photo6.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }, {
+    //                 id: 16,
+    //                 nameTab: 'Kitchan',
+    //                 image: 'img/projectPage/Photo8.svg',
+    //                 title: 'Modern Bedroom',
+    //                 description: 'Decor / Artchitecture',
+    //                 isStar: false,
+    //                 starPicture: 'img/projectPage/Star3.svg',
+    //             }
+    //         ]
+    //         commit('SET_CARTS_BLOCK_PROJECT', cartsBlockProject);
+    //     }, 1500);
+    // }
     // },
     getters: {
         // методы для чтения состояний
@@ -201,6 +342,7 @@ export default new Vuex.Store({
                 .reduce((a, b) => a + b.id, 0);
         },
         getProjectDetails: (state) => state.projectDetailsData,
+        getPoster: (state) => state.poster,
     },
     modules: {
         // модуль VueX для разделения хранилища на под-хранилища

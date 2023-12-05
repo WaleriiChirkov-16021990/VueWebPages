@@ -102,8 +102,8 @@ Solution`,
           blogInfoDesign: 'Interior Design',
         }
       ],
-      poster : {
-        image:'img/fromBlogHTML/posters/Photo7.svg',
+      poster: {
+        image: 'img/fromBlogHTML/posters/Photo7.svg',
         title: 'Articles & News',
         thisChapter: 'Blog'
       }
@@ -117,20 +117,6 @@ Solution`,
 <template>
   <main class="main" id="main">
     <PosterHeaderImage :poster="poster"/>
-<!--    <div id="banner" class="banner container__full">-->
-<!--      <img id="banner__img" class="banner__img" src="../../../src/assets/img/fromBlogHTML/posters/Photo7.svg"-->
-<!--           alt="banner__Background"/>-->
-<!--      <div id="banner__info" class="banner__info">-->
-<!--        <div id="banner__title" class="banner__title">-->
-<!--          <p class="banner__title">Articles & News</p>-->
-<!--        </div>-->
-<!--        <nav id="banner__nav" class="banner__nav">-->
-<!--          <a href="#" id="banner__link__pages1" class="header__link__pages link__pages">Home</a><span-->
-<!--            class="banner__/">/</span>-->
-<!--          <a href="#" id="banner__link__pages3" class="header__link__pages link__pages">Blog</a>-->
-<!--        </nav>-->
-<!--      </div>-->
-<!--    </div>-->
     <div class="blog__latest__post container">
       <div class="blog__latest__post__title">
         <p class="blog__latest__post__title__p">Latest Post</p>

@@ -13,10 +13,13 @@ export default {
       </div>
       <div id="header__right" class="header__right">
         <nav id="nav" class="nav">
-          <a href="#" id="footer__link__pages1" class="header__link__pages link__pages">Home</a>
-          <a href="#" id="footer__link__pages2" class="header__link__pages link__pages">Project</a>
-          <a href="#" id="footer__link__pages3"
-             class="header__link__pages link__pages">Blog</a>
+<!--          <a href="#" id="footer__link__pages1" class="header__link__pages link__pages">Home</a>-->
+<!--          <a href="#" id="footer__link__pages2" class="header__link__pages link__pages">Project</a>-->
+<!--          <a href="#" id="footer__link__pages3"-->
+<!--             class="header__link__pages link__pages">Blog</a>-->
+        <router-link to="/" id="footer__link__pages1" class="header__link__pages link__pages">Home</router-link>
+        <router-link to="/project-page" id="footer__link__pages2" class="header__link__pages link__pages">Project</router-link>
+        <router-link to="/blog-page" id="footer__link__pages3" class="header__link__pages link__pages">Blog</router-link>
         </nav>
       </div>
     </div>
