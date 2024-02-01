@@ -136,7 +136,7 @@ Solution`,
               Lorem Ipsum is not simply random text. It has roots in a piece of classica.</p>
             <div class="blog__latest__post__info__data">
               <p class="blog__latest__post__info__date">26 December,2022</p>
-              <a href="#" class="blog__latest__post__info__link">
+              <a href="/blog-page-details" class="blog__latest__post__info__link">
                 <img src="../../../src/assets/img/product/_.svg" alt="arrow link">
               </a>
             </div>

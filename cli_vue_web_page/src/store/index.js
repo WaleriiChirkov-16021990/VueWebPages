@@ -176,6 +176,10 @@ export default new Vuex.Store({
             title: 'Our Project',
             thisChapter: 'Project'
         },
+        notFound: {
+            image: 'img/notFound/notFound.svg',
+            description: 'We are sorry, but the page you requested was not found',
+        }
     },
     mutations: {
         // методы для изменения состояния
@@ -343,6 +347,7 @@ export default new Vuex.Store({
         },
         getProjectDetails: (state) => state.projectDetailsData,
         getPoster: (state) => state.poster,
+        getNotFoundPageBanner: (state) => state.notFound,
     },
     modules: {
         // модуль VueX для разделения хранилища на под-хранилища
