@@ -179,7 +179,11 @@ export default new Vuex.Store({
         notFound: {
             image: 'img/notFound/notFound.svg',
             description: 'We are sorry, but the page you requested was not found',
-        }
+        },
+        linkBackToHome: {
+            link: '/',
+            imageArrows: 'img/Vector.svg'
+        },
     },
     mutations: {
         // методы для изменения состояния
@@ -348,6 +352,7 @@ export default new Vuex.Store({
         getProjectDetails: (state) => state.projectDetailsData,
         getPoster: (state) => state.poster,
         getNotFoundPageBanner: (state) => state.notFound,
+        getLinkButton: (state) => state.linkBackToHome,
     },
     modules: {
         // модуль VueX для разделения хранилища на под-хранилища
